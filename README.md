@@ -37,8 +37,11 @@ git submodule add <common-header-repo-url> common-header
 # Commit the changes to your application's repository
 
 git add .
+
 git commit -m "Added common header component as submodule"
+
 git push
+
 
 Make sure to replace <common-header-repo-url> with the actual URL of your common header component repository.
 
@@ -50,15 +53,20 @@ When you clone your application's repository or if you've just added a submodule
 
 git submodule init
 
+
 # Update submodules to fetch the code from the common header component repository
 
+
 git submodule update --recursive
+
 
 4. Usage in Your React Application:
 
 You can import and use the common header component within your React application as if it were a local component. For example:
 
+
 import CommonHeader from './common-header';
+
 
 function App() {
 return (
@@ -78,14 +86,20 @@ If you need to make changes to the common header component, navigate to the comm
 
 cd common-header
 
+
 # Make changes and commit them
 
 git add .
+
 git commit -m "Updated common header component"
+
 git push
+
 
 # In your React application, update the submodule to get the latest changes
 
 git submodule update --remote
+
+
 
 Using Git submodules provides a way to share a common component across multiple projects while maintaining version control. However, keep in mind that it introduces some complexity, and you need to ensure that the submodule repositories are accessible and up to date for all your team members.
