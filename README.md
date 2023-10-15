@@ -5,6 +5,7 @@ Start by creating a separate Git repository for your common header component. In
 # Create a new directory for the common header component
 
 mkdir common-header-component
+
 cd common-header-component
 
 # Initialize a new Git repository
@@ -14,8 +15,11 @@ git init
 # Add, commit, and push your header component code
 
 git add .
+
 git commit -m "Initial commit"
+
 git remote add origin <common-header-repo-url>
+
 git push -u origin master
 
 2. Add the Submodule to Your React Applications:
@@ -58,6 +62,7 @@ import CommonHeader from './common-header';
 
 function App() {
 return (
+
 <div>
 <CommonHeader />
 {/_ Your application content _/}
